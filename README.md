@@ -5,7 +5,7 @@
 Assumes your local environment is already [setup to deploy to Heroku](http://devcenter.heroku.com/articles/quickstart).
 
     $ git clone http://github.com/jaxzin/api-samples-teatrove.git
-    $ cd api-samples-teatroce
+    $ cd api-samples-teatrove
     $ heroku create --stack cedar
     $ git push heroku master
     ... wait for it to push and launch ...
