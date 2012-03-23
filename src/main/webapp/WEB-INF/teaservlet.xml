@@ -1,0 +1,60 @@
+<teaservlet>
+
+	<!-- 
+	define the default template when just the directory is provided 
+	-->
+    
+    <template>
+        <default>index</default>
+    </template>
+
+	<!-- 
+	define the logging states for the TeaServlet 
+	-->
+    
+    <log>
+        <debug>false</debug>
+        <info>true</info>
+        <warn>true</warn>
+        <error>true</error>
+    </log>
+
+	<!-- 
+	define the administration key required to access the administration pages
+	ie: http://[host]:[port]/[context]/system/teaservlet/Admin?[key]=[value]
+	-->
+    
+    <admin.key>secret</admin.key>
+    <admin.value>${env.TEA_ADMIN_PASSWORD}</admin.value>
+
+	<!-- 
+	define any plugins for the TeaServlet environment. Plugins may help control
+	the TeaServlet and provide data to other applications or plugins.
+	-->
+    
+    <plugins></plugins>
+
+	<!-- 
+	define the list of applications that the TeaServlet should load and use
+	to provide functionality to the templates.
+	-->
+	
+    <applications>
+
+        <!-- 
+        load our custom EspnApplication that provides access to
+        functionality to call the ESPN API.  The <init> block may
+        be used to provide config data to the application during the init 
+        method.
+        -->
+        
+        <EspnApplication>
+        	<class>com.espn.api.samples.teatrove.EspnApplication</class>
+        	<init>
+                <baseResource>http://api.espn.com/v1/</baseResource>
+        	</init>
+        </EspnApplication>
+
+    </applications>
+
+</teaservlet>

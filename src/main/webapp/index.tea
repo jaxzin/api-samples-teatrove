@@ -1,0 +1,13 @@
+<% template index() 
+
+headlines = getEspnTopHeadlines()
+if (headlines != null) {
+    if (headlines.length > 0) {%>
+    <h2>Some Headlines</h2>
+        <%
+    } else {%>
+    <h2>No Headlines</h2>
+    <%}
+} else {%>
+    <h2>Not a Headlines</h2>
+<%}%>
