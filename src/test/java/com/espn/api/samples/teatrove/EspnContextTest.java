@@ -13,6 +13,8 @@ import org.junit.Test;
 import org.teatrove.teaservlet.ApplicationRequest;
 import org.teatrove.teaservlet.ApplicationResponse;
 
+import java.util.List;
+
 import static org.hamcrest.CoreMatchers.instanceOf;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.core.AllOf.allOf;
@@ -38,7 +40,7 @@ public class EspnContextTest {
                 "espn headlines",
                 context.getEspnTopHeadlines(),
                     allOf(is(notNullValue()),
-                          is(instanceOf(EspnHeadline[].class))
+                          is(instanceOf(List.class))
                     )
         );
     }

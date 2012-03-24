@@ -12,6 +12,9 @@ import org.teatrove.tea.runtime.Context;
 import org.teatrove.teaservlet.ApplicationRequest;
 import org.teatrove.teaservlet.ApplicationResponse;
 
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * Tea functions for using the ESPN API.
  */
@@ -27,7 +30,7 @@ public class EspnContext {
         this.app = app;
     }
 
-    public EspnHeadline[] getEspnTopHeadlines() {
-        return new EspnHeadline[]{new EspnHeadline(),new EspnHeadline()};
+    public List<EspnHeadline> getEspnTopHeadlines() {
+        return Arrays.asList(new EspnHeadline(),new EspnHeadline());
     }
 }
