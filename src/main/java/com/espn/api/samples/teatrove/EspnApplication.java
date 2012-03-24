@@ -1,11 +1,3 @@
-/*
- *  Revision Information:
- *  $Id$
- *  $Author$
- *  $DateTime$
- *
- * Copyright ©2012 ESPN.com.  All rights reserved.
- */
 package com.espn.api.samples.teatrove;
 
 import com.sun.jersey.api.client.Client;
