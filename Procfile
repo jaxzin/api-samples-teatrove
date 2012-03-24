@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -Denv.TEA_ADMIN_PASSWORD=$TEA_ADMIN_PASSWORD -jar target/dependency/jetty-runner.jar --port $PORT target/*.war
+web: java $JAVA_OPTS -Denv.TEA_ADMIN_PASSWORD=$TEA_ADMIN_PASSWORD -Despn.api.key=$espn_api_key -jar target/dependency/jetty-runner.jar --port $PORT target/*.war
