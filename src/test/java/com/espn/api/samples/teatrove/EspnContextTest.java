@@ -34,7 +34,7 @@ public class EspnContextTest {
         context = new EspnContext(mock(ApplicationRequest.class), mock(ApplicationResponse.class), mock(EspnApplication.class));
     }
 
-    @Test
+//    @Test
     public void shouldReturnHeadlines() {
         assertThat(
                 "espn headlines",

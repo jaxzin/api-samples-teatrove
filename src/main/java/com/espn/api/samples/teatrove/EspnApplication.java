@@ -8,6 +8,10 @@
  */
 package com.espn.api.samples.teatrove;
 
+import com.sun.jersey.api.client.Client;
+import com.sun.jersey.api.client.config.ClientConfig;
+import com.sun.jersey.api.client.config.DefaultClientConfig;
+import org.codehaus.jackson.jaxrs.JacksonJsonProvider;
 import org.teatrove.teaservlet.Application;
 import org.teatrove.teaservlet.ApplicationConfig;
 import org.teatrove.teaservlet.ApplicationRequest;
@@ -21,9 +25,13 @@ import javax.servlet.ServletException;
 public class EspnApplication implements Application {
 
     private ApplicationConfig config;
+    private Client restClient;
 
     public void init(ApplicationConfig config) throws ServletException {
         this.config = config;
+        ClientConfig cc = new DefaultClientConfig();
+        cc.getClasses().add(JacksonJsonProvider.class);
+        this.restClient = Client.create(cc);
     }
 
     public void destroy() {
@@ -45,5 +53,9 @@ public class EspnApplication implements Application {
      */
     protected String getInitParameter(String param) {
         return config.getInitParameter(param);
+    }
+    
+    protected Client getRestClient() {
+        return this.restClient;
     }
 }
