@@ -52,12 +52,17 @@ public class EspnContext {
         List<EspnHeadline> headlines = new ArrayList<EspnHeadline>();
         ObjectNode json = resp.getEntity(ObjectNode.class);
         for (JsonNode headlineNodes : json.get("headlines")) {
-            if(headlineNodes.has("title") && headlineNodes.has("links")) {
+            if(headlineNodes.has("title") && headlineNodes.has("links") && headlineNodes.get("images").size() > 0) {
                 EspnHeadline headline =
                         new EspnHeadline.Builder()
                                 .title(headlineNodes.get("title").asText())
                                 .webUrl(headlineNodes.get("links").get("web").get("href").asText())
-                                .addImage(new HeadlineImage())
+                                .addImage(
+                                        new HeadlineImage.Builder()
+                                                .url(headlineNodes.get("images").get(0).get("url").asText())
+                                                .caption(headlineNodes.get("images").get(0).get("caption").asText())
+                                        .build()
+                                )
                         .build();
                 headlines.add(headline);
             }

@@ -128,7 +128,7 @@
                         <!-- Include the Twitter Bootstrap javascript in the WAR -->
                         <resource>
                             <directory>src/bootstrap/js</directory>
-                            <targetPath>javascripts</targetPath>
+                            <targetPath>javascripts/bootstrap</targetPath>
                             <includes>
                                 <include>bootstrap*.js</include>
                             </includes>
