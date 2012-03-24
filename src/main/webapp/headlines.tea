@@ -4,16 +4,6 @@ params = ##('title', 'Headlines',
             'lead', 'Samples of how you could use the Headlines API for various components.')
 
 call layout.shell(params) {
-headlines = getEspnTopHeadlines()
-if (headlines != null) {
-    if (headlines.length > 0) {%>
-    <h2>Some Headlines</h2>
-        <%
-    } else {%>
-    <h2>No Headlines</h2>
-    <%}
-} else {%>
-    <h2>Not a Headlines</h2>
-<%}
+    call headlines.carousel.carousel()
 }
 %>

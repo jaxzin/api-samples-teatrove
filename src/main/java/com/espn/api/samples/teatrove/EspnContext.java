@@ -28,6 +28,6 @@ public class EspnContext {
     }
 
     public EspnHeadline[] getEspnTopHeadlines() {
-        return new EspnHeadline[]{new EspnHeadline()};
+        return new EspnHeadline[]{new EspnHeadline(),new EspnHeadline()};
     }
 }
