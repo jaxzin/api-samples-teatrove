@@ -1,3 +1,9 @@
-<%template carouselItem(com.espn.api.samples.teatrove.EspnHeadline headline)
-    headline
-%>
+<%template carouselItem(com.espn.api.samples.teatrove.EspnHeadline headline)%>
+        <div class="item">
+            <a href="<%headline.webUrl%>">
+                <img src="<%headline.images?[0]?.url%>" alt="<%headline.images?[0]?.caption%>" />
+            </a>
+            <div class="carousel-caption">
+                <h4><%headline.title%></h4>
+            </div>
+        </div>
