@@ -5,7 +5,17 @@ params = ##('title', 'Welcome',
 
 call layout.shell(params) {
 %>
-    <a href="/headlines">Headlines</a>
+    <hr class='soften'/>
+
+    <section id='samples' class='marketing'>
+        <div class='row'>
+            <div class='span4'>
+                <h2>Headlines API</h2>
+                <p>See some example ways that you might use the ESPN Headlines API in your application.</p>
+                <a href='/headlines' class='btn btn-primary'>See sample &raquo;</a>
+            </div>
+        </div>
+    </section>
 <%
 }
 %>
