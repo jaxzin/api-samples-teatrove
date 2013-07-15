@@ -58,6 +58,12 @@
     <properties>
         <jetty.version>7.5.4.v20111024</jetty.version>
     </properties>
+    
+    <scm>
+		<url>https://github.com/jaxzin/api-samples-teatrove</url>
+		<connection>scm:git:git://github.com/jaxzin/api-samples-teatrove.git</connection>
+		<developerConnection>scm:git:git@github.com:jaxzin/api-samples-teatrove.git</developerConnection>
+	</scm>
 
     <build>
         <pluginManagement>
